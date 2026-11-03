@@ -1,19 +1,10 @@
-* text=auto
-*.v text eol=lf
-*.vh text eol=lf
-*.py text eol=lf
-*.cpp text eol=lf
-*.hpp text eol=lf
-*.h text eol=lf
-*.sh text eol=lf
-*.tcl text eol=lf
-*.sdc text eol=lf
-*.cst text eol=lf
-*.md text eol=lf
+# Preserve uploaded bytes on Windows and Linux, including original vendor inputs.
+# No automatic line-ending conversion; source files remain available for text diffs.
+* -text
 *.fs binary
 *.rknn binary
 *.vo -text
-# Keep generated/encrypted vendor IP byte-for-byte when cloning on other systems.
+# Keep generated/encrypted vendor IP byte-for-byte and out of text diffs.
 fpga/src/camera_pll/*.v binary
 fpga/src/ddr_pll/*.v binary
 fpga/src/ddr3_memory_interface/*.v binary

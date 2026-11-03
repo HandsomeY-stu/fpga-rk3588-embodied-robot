@@ -1,5 +1,5 @@
 {
-  "release": "2026-11-03-github-upload-final-r04",
+  "release": "2026-11-03-private-repository-ci-exact-checkout-r06",
   "usercode": "0x0000325C",
   "bitstream": "integrated_t4v48_uc325c.fs",
   "bitstream_sha256": "205046b2936cde17a770f291c3819977b2f951901ccf9222402300de8d5b0827",
@@ -331,5 +331,660 @@
     "scope": "User reports all other functions verified correct after the r03 delivery.",
     "detailed_measurement_logs_supplied": false,
     "distinction": "Does not replace the recorded agent static/DRY evidence or prove timing signoff or bitwise programming verification."
+  },
+  "portable_text_hashes": {
+    "fpga/build.tcl": {
+      "raw_sha256": "0f715aa176ceb3b9e1a6e03ad838f57185240af4d800aaf021c262cf8140009f",
+      "raw_bytes": 335,
+      "lf_sha256": "0f715aa176ceb3b9e1a6e03ad838f57185240af4d800aaf021c262cf8140009f",
+      "lf_bytes": 335
+    },
+    "fpga/ov5640_ddr3_hdmi.gprj": {
+      "raw_sha256": "52a281d7586d97a4316b538ebde8a1dd9d5f8c8f660587806b173f0444a8146d",
+      "raw_bytes": 4745,
+      "lf_sha256": "0565913c880d694880d559a5a08452090808d3709a9ea56982f1b0e8ec90784c",
+      "lf_bytes": 4681
+    },
+    "fpga/README.md": {
+      "raw_sha256": "9e3ea70a1ff3ed660a62093891037de99018b81df8e59307638edf50d0484658",
+      "raw_bytes": 1050,
+      "lf_sha256": "9e3ea70a1ff3ed660a62093891037de99018b81df8e59307638edf50d0484658",
+      "lf_bytes": 1050
+    },
+    "fpga/src/ov5640_ddr3_hdmi.cst": {
+      "raw_sha256": "a8555f5db0d75bc06a904fe70e47968bce5c8a732058ee9b17df0772baa3312d",
+      "raw_bytes": 16901,
+      "lf_sha256": "a487e91a808ebea75a05eb2661bc77464cd84f5c1af26aa10e3541077112738e",
+      "lf_bytes": 16636
+    },
+    "fpga/src/ov5640_ddr3_hdmi.v": {
+      "raw_sha256": "fcc8303505bd3405a2b12a1842e53bd021c34e8746a5799b6d1cf8ea2c3d7727",
+      "raw_bytes": 44655,
+      "lf_sha256": "fcc8303505bd3405a2b12a1842e53bd021c34e8746a5799b6d1cf8ea2c3d7727",
+      "lf_bytes": 44655
+    },
+    "fpga/src/pll_init.v": {
+      "raw_sha256": "f54934f4ca55ead2e877563fc582c06e1c88f75ddc2b3646cfdfa08d64051e6a",
+      "raw_bytes": 14478,
+      "lf_sha256": "f54934f4ca55ead2e877563fc582c06e1c88f75ddc2b3646cfdfa08d64051e6a",
+      "lf_bytes": 14478
+    },
+    "fpga/src/pll_mDRP_intf.v": {
+      "raw_sha256": "6380774c682f607f11088cafa39ed1556e4c4db925ee2e72b78340026d4fd6ad",
+      "raw_bytes": 5213,
+      "lf_sha256": "825b2eff3637a0b8e6df02da4e67be1c87c40f5fff44314794b620ed89ec2890",
+      "lf_bytes": 5137
+    },
+    "fpga/src/rgb_neutral_trim.v": {
+      "raw_sha256": "785a46dafa8ca6999b4a5cbea924e687a8819f336044c8accee63da849970dfc",
+      "raw_bytes": 3783,
+      "lf_sha256": "785a46dafa8ca6999b4a5cbea924e687a8819f336044c8accee63da849970dfc",
+      "lf_bytes": 3783
+    },
+    "fpga/src/timing_dvp_fd5640.sdc": {
+      "raw_sha256": "6540ae1f9f1fcb98bc4af0016f458a96ef03ba96d4124ac3196d7cd270f00668",
+      "raw_bytes": 1434,
+      "lf_sha256": "dcad459fda69de9febe22cf353854a040fd73de68a7b212279b0165db126e41b",
+      "lf_bytes": 1432
+    },
+    "fpga/src/avoid/avoid_fsm.v": {
+      "raw_sha256": "24308d6014c0defa5bf0b9dfc4b702470262434f24e61c43cca71fcfc2a277ce",
+      "raw_bytes": 5929,
+      "lf_sha256": "24308d6014c0defa5bf0b9dfc4b702470262434f24e61c43cca71fcfc2a277ce",
+      "lf_bytes": 5929
+    },
+    "fpga/src/avoid/ultrasonic_hcsr04.v": {
+      "raw_sha256": "4054569954810b9afe5fe919c708d1a264a68267a46ec9ba79652fefc88c3938",
+      "raw_bytes": 5306,
+      "lf_sha256": "4054569954810b9afe5fe919c708d1a264a68267a46ec9ba79652fefc88c3938",
+      "lf_bytes": 5306
+    },
+    "fpga/src/avoid/us_poll.v": {
+      "raw_sha256": "06d26f1699163c44ae0550307a2792b8fb9b8c2022098029557fd447de5889ff",
+      "raw_bytes": 3487,
+      "lf_sha256": "06d26f1699163c44ae0550307a2792b8fb9b8c2022098029557fd447de5889ff",
+      "lf_bytes": 3487
+    },
+    "fpga/src/camera_init/camera_init.v": {
+      "raw_sha256": "ea3d80e5326f01e17017fd85f67a95e03208fa6ed063c89f9670c2dee304ea6f",
+      "raw_bytes": 5208,
+      "lf_sha256": "ea3d80e5326f01e17017fd85f67a95e03208fa6ed063c89f9670c2dee304ea6f",
+      "lf_bytes": 5208
+    },
+    "fpga/src/camera_init/ov5640_init_table_jpeg.v": {
+      "raw_sha256": "5e7ad0248284fdc5d3ac07f54d6039c1929e3c87eed506364f4703a5a8ab769d",
+      "raw_bytes": 8271,
+      "lf_sha256": "5e7ad0248284fdc5d3ac07f54d6039c1929e3c87eed506364f4703a5a8ab769d",
+      "lf_bytes": 8271
+    },
+    "fpga/src/camera_init/ov5640_init_table_rgb.v": {
+      "raw_sha256": "21c66c496974b26f9776ca5df6e03ad458d7821cba9235da8c79c29becdb3420",
+      "raw_bytes": 8344,
+      "lf_sha256": "21c66c496974b26f9776ca5df6e03ad458d7821cba9235da8c79c29becdb3420",
+      "lf_bytes": 8344
+    },
+    "fpga/src/camera_init/ov7725_init_table_rgb.v": {
+      "raw_sha256": "d473a7ccf1d10367b9f67fe2235a0e27e3e3bdc5c0f7467c95259908e896a5ae",
+      "raw_bytes": 2700,
+      "lf_sha256": "d473a7ccf1d10367b9f67fe2235a0e27e3e3bdc5c0f7467c95259908e896a5ae",
+      "lf_bytes": 2700
+    },
+    "fpga/src/camera_pll/camera_pll.ipc": {
+      "raw_sha256": "361ec3820068fd463b83babe10b8cf6ba390c599f41b208b752e5242e15d26e6",
+      "raw_bytes": 3964,
+      "lf_sha256": "14ded1f5e6f884e7c3ab9d8c86114a7187650550deefab2d1248a0e86ee663b6",
+      "lf_bytes": 3817
+    },
+    "fpga/src/camera_pll/camera_pll.mod": {
+      "raw_sha256": "874dc589e6ec18d36c8c2cfc85306b959707cc3ea7b41e36497e0e15f6bb7db7",
+      "raw_bytes": 1099,
+      "lf_sha256": "a6115d363c6421d63acd174678963c2acc57b19c88dc77e3d5e982b5f661269a",
+      "lf_bytes": 1040
+    },
+    "fpga/src/camera_pll/camera_pll.v": {
+      "raw_sha256": "e87dbd608045aaffa7491f4dd7cdd3d0d345c9d6bbc604bd5dc17181a53dda50",
+      "raw_bytes": 1188,
+      "lf_sha256": "0222204ee8d4ec97e43975bd2ca328756a20c60d3c290696948adfee9b2047d4",
+      "lf_bytes": 1125
+    },
+    "fpga/src/camera_pll/camera_pll_mod.v": {
+      "raw_sha256": "194fc604de3c7067a23d2e4d9224c99b9f11ca8619f85cf0ca64820688c3c8b6",
+      "raw_bytes": 4405,
+      "lf_sha256": "194fc604de3c7067a23d2e4d9224c99b9f11ca8619f85cf0ca64820688c3c8b6",
+      "lf_bytes": 4405
+    },
+    "fpga/src/camera_pll/camera_pll_mod_tmp.v": {
+      "raw_sha256": "3f93d27b47dd3c15be014810cc3f82322860c8f132107c16aa0ac24ec4c97bcc",
+      "raw_bytes": 944,
+      "lf_sha256": "a70356a37d6b18e829b28cb1f54002c8ca285ac58e514e933b013a477cdbf303",
+      "lf_bytes": 917
+    },
+    "fpga/src/camera_pll/camera_pll_tmp.v": {
+      "raw_sha256": "f58a1cca0e7c128eb6d624775fb817cc58586821dc508eea368c4fd2dd4d5627",
+      "raw_bytes": 673,
+      "lf_sha256": "f58a1cca0e7c128eb6d624775fb817cc58586821dc508eea368c4fd2dd4d5627",
+      "lf_bytes": 673
+    },
+    "fpga/src/comm/car_cmd_parse.v": {
+      "raw_sha256": "d3cf8832cb46b77f1208503a4964227f6e228f0389348dbf740b58b12eca6823",
+      "raw_bytes": 5924,
+      "lf_sha256": "d3cf8832cb46b77f1208503a4964227f6e228f0389348dbf740b58b12eca6823",
+      "lf_bytes": 5924
+    },
+    "fpga/src/comm/uart_tx_8n1.v": {
+      "raw_sha256": "f1139f6f801b7bb9465acb0b985f36d286192bf69550ddcec7a529cbca3f904b",
+      "raw_bytes": 2304,
+      "lf_sha256": "f1139f6f801b7bb9465acb0b985f36d286192bf69550ddcec7a529cbca3f904b",
+      "lf_bytes": 2304
+    },
+    "fpga/src/comm/vision_follow_ctrl.v": {
+      "raw_sha256": "df560aaceade96e3bfd21c0f5837e403bf57047549fae2e1709eddcfd11e6177",
+      "raw_bytes": 3607,
+      "lf_sha256": "df560aaceade96e3bfd21c0f5837e403bf57047549fae2e1709eddcfd11e6177",
+      "lf_bytes": 3607
+    },
+    "fpga/src/comm/vis_osd_text.v": {
+      "raw_sha256": "3689a4582d4223a1d34f8c482e006aa78683d6fbf06731c79cfb74e877f673f4",
+      "raw_bytes": 4612,
+      "lf_sha256": "3689a4582d4223a1d34f8c482e006aa78683d6fbf06731c79cfb74e877f673f4",
+      "lf_bytes": 4612
+    },
+    "fpga/src/comm/vis_uart_bridge.v": {
+      "raw_sha256": "86a974404b3b6af94a5fff0444251b8649801243310429e967c47f05a6a0b680",
+      "raw_bytes": 12148,
+      "lf_sha256": "86a974404b3b6af94a5fff0444251b8649801243310429e967c47f05a6a0b680",
+      "lf_bytes": 12148
+    },
+    "fpga/src/common/car_crc8.v": {
+      "raw_sha256": "64e516aa5a29e548e23151fb030f6901d1a89f6459d3ef7e9b42cc9ba30f711e",
+      "raw_bytes": 1017,
+      "lf_sha256": "64e516aa5a29e548e23151fb030f6901d1a89f6459d3ef7e9b42cc9ba30f711e",
+      "lf_bytes": 1017
+    },
+    "fpga/src/common/car_defines.vh": {
+      "raw_sha256": "157679cbc5fba37772d37c132216aee8dbf8da1d16de0149747e65fa5b2b55ca",
+      "raw_bytes": 6041,
+      "lf_sha256": "157679cbc5fba37772d37c132216aee8dbf8da1d16de0149747e65fa5b2b55ca",
+      "lf_bytes": 6041
+    },
+    "fpga/src/common/sync_2ff.v": {
+      "raw_sha256": "d891852aaceaa07037a5ba2204359674ef485cbae32ddbb06a4d45cb107f1b8f",
+      "raw_bytes": 617,
+      "lf_sha256": "d891852aaceaa07037a5ba2204359674ef485cbae32ddbb06a4d45cb107f1b8f",
+      "lf_bytes": 617
+    },
+    "fpga/src/ddr3_ctrl_2port/ddr3_ctrl_2port.v": {
+      "raw_sha256": "cabf5f0644b77eff346e73c045370d7e0c4bd1be8f3068134ac135138b147d4b",
+      "raw_bytes": 5677,
+      "lf_sha256": "cabf5f0644b77eff346e73c045370d7e0c4bd1be8f3068134ac135138b147d4b",
+      "lf_bytes": 5677
+    },
+    "fpga/src/ddr3_ctrl_2port/fifo_ddr3_adapter.v": {
+      "raw_sha256": "951ebd134c350a22bae39ba0a2eac79f60987f08d8c0ccb43b7baf507024d16f",
+      "raw_bytes": 8770,
+      "lf_sha256": "951ebd134c350a22bae39ba0a2eac79f60987f08d8c0ccb43b7baf507024d16f",
+      "lf_bytes": 8770
+    },
+    "fpga/src/ddr3_memory_interface/ddr3_memory_interface.ipc": {
+      "raw_sha256": "6ae2bd59536bada0288349af68c6052cd8ab7a5af07ff544f99be152f681a70d",
+      "raw_bytes": 769,
+      "lf_sha256": "904577c871f8b8ec7f70f024de0511ffe6ca28bce08beb75b8d7dfdccad6f90e",
+      "lf_bytes": 718
+    },
+    "fpga/src/ddr3_memory_interface/ddr3_memory_interface.v": {
+      "raw_sha256": "6039c7b1e9c616fbe08daf2cf1809eaa02311b56deff8d4fc62e80e0b7d20ae4",
+      "raw_bytes": 1491639,
+      "lf_sha256": "72d6098ce4020e8366ee0698c1424b2528980f78e4c79200b0d661d13cfbb556",
+      "lf_bytes": 1472402
+    },
+    "fpga/src/ddr3_memory_interface/ddr3_memory_interface_tmp.v": {
+      "raw_sha256": "317c091cb0333ca98a2410a5a1236411e2c356d59cb826f9601a6c28de057a80",
+      "raw_bytes": 2329,
+      "lf_sha256": "857be4c6b5eaaec96597a22c55b632add0932fba03ff71c1ad86ec47e8bcaa1d",
+      "lf_bytes": 2273
+    },
+    "fpga/src/ddr_pll/ddr_pll.ipc": {
+      "raw_sha256": "61a7be95bf7793994e9b65ff335b632b89e6cff76bd07dd4d61c334b33a4331f",
+      "raw_bytes": 3966,
+      "lf_sha256": "1d7e62864affe471d708d8b09050070e415fe6a2464a00661c6bb7b7d3bb5e4d",
+      "lf_bytes": 3819
+    },
+    "fpga/src/ddr_pll/ddr_pll.mod": {
+      "raw_sha256": "7188e6e02b84a6fa8a199f712ceacc5d767f92eecce9f5ff114269c3d84eefba",
+      "raw_bytes": 1140,
+      "lf_sha256": "07d7a6219758052f65a7e818acfa4a2aec7533d41371f8a23b6dee7e9309e78e",
+      "lf_bytes": 1078
+    },
+    "fpga/src/ddr_pll/ddr_pll.v": {
+      "raw_sha256": "1029730ed0b0cbe5285fed46910c45a5036dba764216ed334b853b164013c251",
+      "raw_bytes": 1348,
+      "lf_sha256": "6dcd2d70b781b151c252c9b4574af02e7a4d16624374517e3731ddaa00b9df6e",
+      "lf_bytes": 1276
+    },
+    "fpga/src/ddr_pll/ddr_pll_mod.v": {
+      "raw_sha256": "455ba70b7a02368a3911d27c66643294b1217174b7f5e4b67d35e3f429cbe780",
+      "raw_bytes": 4544,
+      "lf_sha256": "da229dc7ee71c05b7910f7e23c2048aa8904f0f94014a1f2a368808492eb4f5a",
+      "lf_bytes": 4402
+    },
+    "fpga/src/ddr_pll/ddr_pll_mod_tmp.v": {
+      "raw_sha256": "bbbcd21d3e12d1148a94d6ce3fe78d965d087c9d80371875322e43cf21841aa5",
+      "raw_bytes": 944,
+      "lf_sha256": "23f889419d6c5c26c44d551a5e38b0aa18d216a05766eef6e5574bc83bf1414f",
+      "lf_bytes": 917
+    },
+    "fpga/src/ddr_pll/ddr_pll_tmp.v": {
+      "raw_sha256": "2232d9eb389b30f0ce29ae1ee12889b57991627291a0f2daa1b0ffb8f8da1d0c",
+      "raw_bytes": 936,
+      "lf_sha256": "2dda7de08d33bc4d933373049f1e5297c487ffcabc2f0bc12e7005edbc4e3d6e",
+      "lf_bytes": 909
+    },
+    "fpga/src/despeckle/despeckle_median5.v": {
+      "raw_sha256": "dabbb616ea65987bc84fbc2e7c6054242116029a46f8d045a328968df790ca81",
+      "raw_bytes": 5501,
+      "lf_sha256": "5819b6a4d2f16bd87094e3c5a9d4ff3ae6ca4814d6a374acf0303e0a7557e9f1",
+      "lf_bytes": 5288
+    },
+    "fpga/src/disp/hc595_driver.v": {
+      "raw_sha256": "fdccab2596365001ee50fe60a28280bff8e7086d8adc11cc07f2dad8f74a59d2",
+      "raw_bytes": 2585,
+      "lf_sha256": "fdccab2596365001ee50fe60a28280bff8e7086d8adc11cc07f2dad8f74a59d2",
+      "lf_bytes": 2585
+    },
+    "fpga/src/disp/hex8.v": {
+      "raw_sha256": "98e50da92d74e0898e6f0e45e98bc5d3a5dbe5bf376622a23106312fae02e8d0",
+      "raw_bytes": 1996,
+      "lf_sha256": "98e50da92d74e0898e6f0e45e98bc5d3a5dbe5bf376622a23106312fae02e8d0",
+      "lf_bytes": 1996
+    },
+    "fpga/src/dvi_tx/dvi_tx.ipc": {
+      "raw_sha256": "f6d69db0666385b2c1972ca5d162571d6926053dd069fef52b7d0a6ee0b28bd2",
+      "raw_bytes": 215,
+      "lf_sha256": "fbab46a9db8baa9d631d6de82e9bdfa569b52f307b67aa120f9de973d24cac43",
+      "lf_bytes": 201
+    },
+    "fpga/src/dvi_tx/dvi_tx.v": {
+      "raw_sha256": "78a9bd8159eec6fe59f4ceca95f01623daccb29a128a58e962d55b33cdb979ac",
+      "raw_bytes": 85031,
+      "lf_sha256": "56e18d2d8583feced251dd165df5032c73aec38e8c8f4f68b699a9653f85d989",
+      "lf_bytes": 83885
+    },
+    "fpga/src/dvi_tx/dvi_tx_tmp.v": {
+      "raw_sha256": "4bcc0cf2cb63e4d25333966b620bd4d0c7e0feea56050ddbc7f282898d774e6b",
+      "raw_bytes": 1099,
+      "lf_sha256": "11d2805319b8084d090848249162991732f38ce9ce365cbd8cb6f4d6bfc4dda8",
+      "lf_bytes": 1070
+    },
+    "fpga/src/DVP_Capture/DVP_Capture.v": {
+      "raw_sha256": "e45d5c0fb707c82b261610ab9f0eb08c3fa024ef2c6795ca4ec4daaf8e669874",
+      "raw_bytes": 5428,
+      "lf_sha256": "e45d5c0fb707c82b261610ab9f0eb08c3fa024ef2c6795ca4ec4daaf8e669874",
+      "lf_bytes": 5428
+    },
+    "fpga/src/gowin_ddr/gowin_ddr.ipc": {
+      "raw_sha256": "0410482d91b2b8959c49b038afa9d8bb6fa09289f10cdb6b3b1f79dc5537c4d8",
+      "raw_bytes": 394,
+      "lf_sha256": "135494edc761c35b60f8b5d26e35827b2d31f9ae18e784bb080c5460bf2306d4",
+      "lf_bytes": 371
+    },
+    "fpga/src/gowin_ddr/gowin_ddr.v": {
+      "raw_sha256": "89a722341a5094878394ef2fb2dcd590e5921149288e13d1640e9c6109415b6a",
+      "raw_bytes": 1258,
+      "lf_sha256": "d852a99224a10dbc5c3f5cafeb5c3d2e7113ee79558fe68e60c6fb137af414f1",
+      "lf_bytes": 1193
+    },
+    "fpga/src/gowin_ddr/gowin_ddr_tmp.v": {
+      "raw_sha256": "c19d92a92832b98c52825f8a74772093d4369675c2f776de2aab4b50bdee3f1d",
+      "raw_bytes": 559,
+      "lf_sha256": "34ca56da6d195f005af55bcbab254db946505fd7f3663f6f8f58feb9af12cbac",
+      "lf_bytes": 540
+    },
+    "fpga/src/imu/angle_text_fmt.v": {
+      "raw_sha256": "ea3a6b4117a1886fee41bb7822c046ef68a9e79fc7128388bffdd5eb5a9371a4",
+      "raw_bytes": 10455,
+      "lf_sha256": "ea3a6b4117a1886fee41bb7822c046ef68a9e79fc7128388bffdd5eb5a9371a4",
+      "lf_bytes": 10455
+    },
+    "fpga/src/imu/att_align.v": {
+      "raw_sha256": "31e8b6188c2e541e86b813f2d52428ce29203af7b255b21931c1854f7bb54b8b",
+      "raw_bytes": 673,
+      "lf_sha256": "31e8b6188c2e541e86b813f2d52428ce29203af7b255b21931c1854f7bb54b8b",
+      "lf_bytes": 673
+    },
+    "fpga/src/imu/jy901_rx.v": {
+      "raw_sha256": "1f7e69a1550477b803aeb212427fcd5614626cb57e95ed2a69b806649e8fbbbc",
+      "raw_bytes": 5590,
+      "lf_sha256": "1f7e69a1550477b803aeb212427fcd5614626cb57e95ed2a69b806649e8fbbbc",
+      "lf_bytes": 5590
+    },
+    "fpga/src/motion/car_ctrl_top.v": {
+      "raw_sha256": "f48ae4fd6dd278d26d672fc687e2fa827de5b07ec606ace99ef5ed43745824f8",
+      "raw_bytes": 18054,
+      "lf_sha256": "f48ae4fd6dd278d26d672fc687e2fa827de5b07ec606ace99ef5ed43745824f8",
+      "lf_bytes": 18054
+    },
+    "fpga/src/motion/encoder_quad.v": {
+      "raw_sha256": "0b2d71430f628263fc842ebd14bffff393f12b1b393f189e152b71a054b874d2",
+      "raw_bytes": 3686,
+      "lf_sha256": "0b2d71430f628263fc842ebd14bffff393f12b1b393f189e152b71a054b874d2",
+      "lf_bytes": 3686
+    },
+    "fpga/src/motion/motion_ctrl.v": {
+      "raw_sha256": "1d9266f68b28c83d253ccad5212dcb536c251162ea3d46cca6ab57c04e614eb7",
+      "raw_bytes": 13904,
+      "lf_sha256": "e95e282dd039029dcf0379239aaf116e91101c2827caef133d44cdc22244654f",
+      "lf_bytes": 13502
+    },
+    "fpga/src/motion/motion_safety_gate.v": {
+      "raw_sha256": "12e024137e4872bb60adef806df2d5e8f6177a4c98d715854062e2e3a67afbca",
+      "raw_bytes": 7832,
+      "lf_sha256": "12e024137e4872bb60adef806df2d5e8f6177a4c98d715854062e2e3a67afbca",
+      "lf_bytes": 7832
+    },
+    "fpga/src/motion/motor_drive.v": {
+      "raw_sha256": "9d6c2b01b1e019e039108b9c098d28c66137ad4289f97b5b1af60de7d786127c",
+      "raw_bytes": 3947,
+      "lf_sha256": "9d6c2b01b1e019e039108b9c098d28c66137ad4289f97b5b1af60de7d786127c",
+      "lf_bytes": 3947
+    },
+    "fpga/src/motion/pid_ctrl.v": {
+      "raw_sha256": "0d6f3346d4e27116c54618d6b238c7eb7699a406bffe116ff7850bba7b880824",
+      "raw_bytes": 3790,
+      "lf_sha256": "0d6f3346d4e27116c54618d6b238c7eb7699a406bffe116ff7850bba7b880824",
+      "lf_bytes": 3790
+    },
+    "fpga/src/motion/pwm_gen.v": {
+      "raw_sha256": "f89c71b3d8b28c11403b54cc91f772433ae6aebd142601105ef2b9f833e1471f",
+      "raw_bytes": 2951,
+      "lf_sha256": "f89c71b3d8b28c11403b54cc91f772433ae6aebd142601105ef2b9f833e1471f",
+      "lf_bytes": 2951
+    },
+    "fpga/src/nav/nav_fsm.v": {
+      "raw_sha256": "4a5fcbf25ff5d7cc93b04b3c2305ad25910fa07efd7d7559c818c0f47c96ded7",
+      "raw_bytes": 6755,
+      "lf_sha256": "4a5fcbf25ff5d7cc93b04b3c2305ad25910fa07efd7d7559c818c0f47c96ded7",
+      "lf_bytes": 6755
+    },
+    "fpga/src/nav/odom_xy.v": {
+      "raw_sha256": "3665e3c601c3223543ab1de02c6a94ce66b91d7cc6052fdb9d0b490ca8db1e87",
+      "raw_bytes": 2521,
+      "lf_sha256": "3665e3c601c3223543ab1de02c6a94ce66b91d7cc6052fdb9d0b490ca8db1e87",
+      "lf_bytes": 2521
+    },
+    "fpga/src/nav/sincos_lut.v": {
+      "raw_sha256": "ad0fc7bc25c3ddd8bd9d0137fd1709f910655ebee6f3052c2625f0e5ef1e4259",
+      "raw_bytes": 3219,
+      "lf_sha256": "ad0fc7bc25c3ddd8bd9d0137fd1709f910655ebee6f3052c2625f0e5ef1e4259",
+      "lf_bytes": 3219
+    },
+    "fpga/src/osd/osd_mode_cdc.v": {
+      "raw_sha256": "33a6e1aa6c183b87849a60c45744fb30b4b785db045015ab0860f790b97b6e79",
+      "raw_bytes": 1834,
+      "lf_sha256": "bb5a83d82ba1e0047360add8b3fdbd018790bdfe20720819c48521e6e5e652fa",
+      "lf_bytes": 1789
+    },
+    "fpga/src/osd/osd_overlay.v": {
+      "raw_sha256": "bf4718fb86401c5e18d5a8e575030162c6850b55ae678b5d7a8a6ae31c83f5c4",
+      "raw_bytes": 8491,
+      "lf_sha256": "bf4718fb86401c5e18d5a8e575030162c6850b55ae678b5d7a8a6ae31c83f5c4",
+      "lf_bytes": 8491
+    },
+    "fpga/src/rd_data_fifo/rd_data_fifo.ipc": {
+      "raw_sha256": "a6b670a076fed98cdd29fab89aef4d7c842c0b47c4278b4451f3d341a01d3811",
+      "raw_bytes": 461,
+      "lf_sha256": "1ff6ef85015448b819ddcaeb330a58edb6350e353b8be072f5aedb8a8e70fc5a",
+      "lf_bytes": 430
+    },
+    "fpga/src/rd_data_fifo/rd_data_fifo.v": {
+      "raw_sha256": "c17895c9493dbba169de89ac9396cbab14adbff6b86154ae9503649a49ac5f42",
+      "raw_bytes": 110792,
+      "lf_sha256": "8a1d6faed404555a9799543af31c7a28b49836d0a35b20d38fe979f74474ea37",
+      "lf_bytes": 109313
+    },
+    "fpga/src/rd_data_fifo/rd_data_fifo_tmp.v": {
+      "raw_sha256": "0e6bdb778812d467d919ebd1c93dfe9ee3871cecaa6cd0b28c8d3f00a71481e4",
+      "raw_bytes": 937,
+      "lf_sha256": "13d5716a18f348b1c16827b50d0ba04b8287cdf52a7261bf206865c809e6f19a",
+      "lf_bytes": 908
+    },
+    "fpga/src/task4/task4_seg1_fsm.v": {
+      "raw_sha256": "f445c27cba9a51a1bc8e916b2af20699718becf2ecefddf75e1920e41b1433e8",
+      "raw_bytes": 42869,
+      "lf_sha256": "e33ba2140448cc1f11a18034d510ea209ade18218865b737ac0d9853bb9cbf0a",
+      "lf_bytes": 41646
+    },
+    "fpga/src/vga/disp_driver.v": {
+      "raw_sha256": "271c64b80060136418604e507c73474417d029eae87d5d87f1438c99dbd2b959",
+      "raw_bytes": 3083,
+      "lf_sha256": "271c64b80060136418604e507c73474417d029eae87d5d87f1438c99dbd2b959",
+      "lf_bytes": 3083
+    },
+    "fpga/src/vga/disp_parameter_cfg.v": {
+      "raw_sha256": "c3f905167ed369525ac7882526d3a52b9f4e7799c570dd65324a57e5901e5364",
+      "raw_bytes": 4192,
+      "lf_sha256": "c3f905167ed369525ac7882526d3a52b9f4e7799c570dd65324a57e5901e5364",
+      "lf_bytes": 4192
+    },
+    "fpga/src/vga/dvi_encoder.v": {
+      "raw_sha256": "7f91651a74968916f2fa52e2b005d263544475920551397cbfd6226777b1fcc2",
+      "raw_bytes": 8800,
+      "lf_sha256": "7f91651a74968916f2fa52e2b005d263544475920551397cbfd6226777b1fcc2",
+      "lf_bytes": 8800
+    },
+    "fpga/src/wr_data_fifo/wr_data_fifo.ipc": {
+      "raw_sha256": "9a208f302be269774cb00967019c49108350a96a4006c8ef527050a5b45253b5",
+      "raw_bytes": 460,
+      "lf_sha256": "91eef1625266732f50b8406b465449686d0dbf3c8a07afc3c1f701a19376bdda",
+      "lf_bytes": 429
+    },
+    "fpga/src/wr_data_fifo/wr_data_fifo.v": {
+      "raw_sha256": "191c590e23c02a1b28c886b19463873f88bda660b68deedab4e4049cf456c6c0",
+      "raw_bytes": 61398,
+      "lf_sha256": "3f682d38d7a4923bce5725e5f391a23866f90f6cf52c255aa7afc625ab99cfaf",
+      "lf_bytes": 60552
+    },
+    "fpga/src/wr_data_fifo/wr_data_fifo_tmp.v": {
+      "raw_sha256": "4078c2385ddb27432ebc698c90c078188b8acada879cf6723cf9bc7c09861c5e",
+      "raw_bytes": 937,
+      "lf_sha256": "b06a28973ad84a93622dc3b46dbde382a5dcd0db352ccd47daaca892822b6b2f",
+      "lf_bytes": 908
+    },
+    "fpga/src/camera_init/i2c_control/i2c_bit_shift.v": {
+      "raw_sha256": "5d8053b27d5b681e62516bdb49d24f613ec270f32a1e6b59e8dd63f7cf97fce9",
+      "raw_bytes": 6600,
+      "lf_sha256": "5d8053b27d5b681e62516bdb49d24f613ec270f32a1e6b59e8dd63f7cf97fce9",
+      "lf_bytes": 6600
+    },
+    "fpga/src/camera_init/i2c_control/i2c_bit_shift_tb.v": {
+      "raw_sha256": "d62397564317aad923e4dc33903517e57927c68fe056922906fcf81981ee1dec",
+      "raw_bytes": 2399,
+      "lf_sha256": "d62397564317aad923e4dc33903517e57927c68fe056922906fcf81981ee1dec",
+      "lf_bytes": 2399
+    },
+    "fpga/src/camera_init/i2c_control/i2c_control.v": {
+      "raw_sha256": "a5bd855066a4ee9815e653327d3f31e156dab1a8d6ff7b5df7323545a63ef7c3",
+      "raw_bytes": 5619,
+      "lf_sha256": "a5bd855066a4ee9815e653327d3f31e156dab1a8d6ff7b5df7323545a63ef7c3",
+      "lf_bytes": 5619
+    },
+    "fpga/src/camera_init/i2c_control/i2c_control_tb.v": {
+      "raw_sha256": "51dc48d1ddb38a153d467c02586cb63ef64befa390ae318fad4caac6a2e8ac6c",
+      "raw_bytes": 2946,
+      "lf_sha256": "51dc48d1ddb38a153d467c02586cb63ef64befa390ae318fad4caac6a2e8ac6c",
+      "lf_bytes": 2946
+    },
+    "fpga/src/camera_init/i2c_control/M24LC04B.v": {
+      "raw_sha256": "21c3b0e7bd859378b10138153aa2c1864ae44540050430acb758430d12227052",
+      "raw_bytes": 10455,
+      "lf_sha256": "21c3b0e7bd859378b10138153aa2c1864ae44540050430acb758430d12227052",
+      "lf_bytes": 10455
+    },
+    "fpga/src/camera_init/i2c_control/M24LC64.v": {
+      "raw_sha256": "0fcbf3265561a614a747b0b864faa1b7a93a9ef6e4ade1ed291fd99e01b42577",
+      "raw_bytes": 11296,
+      "lf_sha256": "0fcbf3265561a614a747b0b864faa1b7a93a9ef6e4ade1ed291fd99e01b42577",
+      "lf_bytes": 11296
+    },
+    "firmware/reports/ov5640_ddr3_hdmi.rpt.txt": {
+      "raw_sha256": "ee61917ddc194992b6a4e35741018a7f0de9c01ffaba5b08b277564237752868",
+      "raw_bytes": 115689,
+      "lf_sha256": "41250b3f7e8a29cd67ee4ad6029281af140270d93e1c7ccea4d413c453ed6d2b",
+      "lf_bytes": 115095
+    },
+    "firmware/reports/ov5640_ddr3_hdmi.rpt.html": {
+      "raw_sha256": "b361bdb53ea63bada67c20623f1b9a3447794b9334741534be941c6e76ab71c7",
+      "raw_bytes": 144217,
+      "lf_sha256": "c5f89bf265420f91bc71c3d0c88e5ed301657788bc97cdbf44ff361fca0ded6b",
+      "lf_bytes": 134802
+    },
+    "firmware/reports/ov5640_ddr3_hdmi.tr.html": {
+      "raw_sha256": "4d28f392399f495592bd87880fc9b9bf447d4694329e0ec160f00221b74360ef",
+      "raw_bytes": 367,
+      "lf_sha256": "f2b8d939f6f57747b5c2a2f7020ecd4686c55019388caa9c54db0526506514b4",
+      "lf_bytes": 357
+    },
+    "firmware/reports/ov5640_ddr3_hdmi_tr_cata.html": {
+      "raw_sha256": "b177865bf70a13e58977ebe64417f347d10034028be4b1a16291443e0967be7f",
+      "raw_bytes": 8151,
+      "lf_sha256": "0e5df90015677cbb3b1ecec930a87229583768f020a11e5d413e6717e6ebf277",
+      "lf_bytes": 8019
+    },
+    "firmware/reports/ov5640_ddr3_hdmi_tr_content.html": {
+      "raw_sha256": "1b44fc07d3504147ee033c736a80d3e29dd34426fb4ca4271e9c1ae93162f594",
+      "raw_bytes": 621240,
+      "lf_sha256": "2f293a4ebcd10354b151b464c96f6d1940ee31d34e0c683cafa5b00f1c903ba2",
+      "lf_bytes": 594187
+    },
+    "firmware/reports/ov5640_ddr3_hdmi.timing_paths": {
+      "raw_sha256": "146be3b8c9f380b4732d3d5a7cd764ebcc8ecfec9c5c23bf83b189842e87914d",
+      "raw_bytes": 29631,
+      "lf_sha256": "83aaa712976390e3f5e935dac4e7f188c0cd24e2736f946cc28dcf71aebdd715",
+      "lf_bytes": 28339
+    },
+    "web/app.py": {
+      "raw_sha256": "d15e5b26306eff9f6e1d04a70b539eedb3ec758acaf1925eb790413c3559cdab",
+      "raw_bytes": 1723,
+      "lf_sha256": "d15e5b26306eff9f6e1d04a70b539eedb3ec758acaf1925eb790413c3559cdab",
+      "lf_bytes": 1723
+    },
+    "web/assets.py": {
+      "raw_sha256": "caf5ba4887847a3a1a8551169006d664f2b96ef42609792e0759f05835224931",
+      "raw_bytes": 1094,
+      "lf_sha256": "caf5ba4887847a3a1a8551169006d664f2b96ef42609792e0759f05835224931",
+      "lf_bytes": 1094
+    },
+    "web/fpga_web_modes.py": {
+      "raw_sha256": "66b7f05e196d387ba7bdf9082754f2ffc7e3b8b6db7924a9a51479894ba37449",
+      "raw_bytes": 3501,
+      "lf_sha256": "0e2f781552cc24544afac0043ec5c725c85eac14f4def282eb7e9dd2df73ed2f",
+      "lf_bytes": 3436
+    },
+    "web/README.md": {
+      "raw_sha256": "05a8726c7aa2961c3c2312c76e529fb241cab57da67ec158ce3ca47cb481f1c5",
+      "raw_bytes": 3771,
+      "lf_sha256": "0931df2aec4aa3d5158f00a39f3b68c16b64f6c24fa167d8927cb14127347854",
+      "lf_bytes": 3703
+    },
+    "web/server.py": {
+      "raw_sha256": "35e2462bf54d3a46950c39a659dadd228d55c070c4a65a5e2c445b7041059402",
+      "raw_bytes": 37120,
+      "lf_sha256": "1b8c2eb710ddb562e7676989b6186a2a87edbdcad7a16971461604a794891bfe",
+      "lf_bytes": 36177
+    },
+    "web/test_web.py": {
+      "raw_sha256": "f7bd6b21437701229c49c546cdb7baa026eb91e5ce262862d57da5e9eb59584b",
+      "raw_bytes": 6374,
+      "lf_sha256": "f7bd6b21437701229c49c546cdb7baa026eb91e5ce262862d57da5e9eb59584b",
+      "lf_bytes": 6374
+    },
+    "web/config/carweb.env.example": {
+      "raw_sha256": "7532aca6baf560e14828f2ffc9f8fb89d4ce5493c58419858d18573e5fb6e207",
+      "raw_bytes": 664,
+      "lf_sha256": "7532aca6baf560e14828f2ffc9f8fb89d4ce5493c58419858d18573e5fb6e207",
+      "lf_bytes": 664
+    },
+    "web/config/robot-console.service.example": {
+      "raw_sha256": "db14598e36e740fac3957c1314bfe1b20db48168be786fd6f6f5f6219874be5f",
+      "raw_bytes": 393,
+      "lf_sha256": "db14598e36e740fac3957c1314bfe1b20db48168be786fd6f6f5f6219874be5f",
+      "lf_bytes": 393
+    },
+    "web/static/app.js": {
+      "raw_sha256": "539465eadcd07fceca1d78dca6a01802fb61fb2661288d5184df4a48ef87601e",
+      "raw_bytes": 12683,
+      "lf_sha256": "ea666d713389475efa9aff39ed4470fb5179fec7f788b2230b8a9db41d9d6eb0",
+      "lf_bytes": 12412
+    },
+    "web/static/index.html": {
+      "raw_sha256": "8ab27b587d7262550794b6dc4d0107880a432207cfd3aac0cc27169657044344",
+      "raw_bytes": 5271,
+      "lf_sha256": "09ba3562020853ee359983df1b79798168af657bca6d6fd7dcdb3ea35edf4d0d",
+      "lf_bytes": 5177
+    },
+    "web/static/style.css": {
+      "raw_sha256": "2c771848f2a32a4ca03642b716b136f9107cb7a280e115aae08fb541b9f021b2",
+      "raw_bytes": 3151,
+      "lf_sha256": "22dd1a260b7ca4754f0a7c152a797afa3271d95b425bb68fdafa4e3c157963c9",
+      "lf_bytes": 3104
+    },
+    "firmware/board_validation.json": {
+      "raw_sha256": "df167af3984d073739204c1113784a0e07f4c8302aff972acd724f42e832d8fb",
+      "raw_bytes": 3689,
+      "lf_sha256": "286b86e9683d2252dd3699eb246611c14c3891ba678929d0e1459798d4426bd8",
+      "lf_bytes": 3561
+    },
+    "models/assets_manifest.json": {
+      "raw_sha256": "f1f4010ef51fbe0aae3f5d54e034867b49778526de3e74ade5fea54fe6f5ec08",
+      "raw_bytes": 1157,
+      "lf_sha256": "b8eae2242fe30d37151d548ade8ef572d0e6406aa50b4c9153ce3d9b8d2ed264",
+      "lf_bytes": 1132
+    },
+    "models/box_priors.txt": {
+      "raw_sha256": "3560aa6b03bb7f69240b6efcac88dbf56ffa3c73b0da13f695bf97c2206d2089",
+      "raw_bytes": 76929,
+      "lf_sha256": "3560aa6b03bb7f69240b6efcac88dbf56ffa3c73b0da13f695bf97c2206d2089",
+      "lf_bytes": 76929
+    },
+    "models/coco_labels_list.txt": {
+      "raw_sha256": "6d4b61aedabd129c30f2d5c0d8ed6da0068fb975a91e0085544792d6b3d3ca5e",
+      "raw_bytes": 664,
+      "lf_sha256": "6d4b61aedabd129c30f2d5c0d8ed6da0068fb975a91e0085544792d6b3d3ca5e",
+      "lf_bytes": 664
+    }
+  },
+  "portable_hash_scope": "Original byte digests are unchanged. Only explicitly recorded CRLF/LF equivalents of text inputs are accepted after Git checkout. Bitstreams, model binaries and encrypted .vo files still require exact bytes.",
+  "ci_compatibility": {
+    "gowin_xml": "Normalize only the legacy prolog version=1 to version=1.0 in memory; do not rewrite the .gprj file.",
+    "line_endings": "Check exact original digest first, then known LF digest bound to the original digest/size.",
+    "hardware_inputs_changed": false,
+    "bitstream_changed": false,
+    "new_tests": 10,
+    "new_ci_result": "Local cross-parser/Git tests passed; the actual remote result is recorded by GitHub Actions for this commit.",
+    "reproduced_strict_error": "Expat 2.8.5: XML declaration not well-formed: line 1, column 15",
+    "local_test_environments": [
+      "Python3.11.9/Expat2.6.0",
+      "Python3.12.14/Expat2.8.3",
+      "Python3.15.0/Expat2.8.5"
+    ],
+    "git_checkout_old_failures": 14,
+    "git_checkout_modes_passed": [
+      "core.autocrlf=false",
+      "core.autocrlf=true"
+    ],
+    "default_bytecode_settings_tested": true,
+    "source_check_python_files": 74,
+    "source_check_gprj_inputs": 55,
+    "patch_files": [
+      "scripts/check_repository.py",
+      "scripts/test_repository_checks.py",
+      "firmware/source_manifest.json",
+      ".github/workflows/source-check.yml"
+    ]
+  },
+  "git_byte_preservation": {
+    "attributes": "* -text; retain original binary/vendor attributes",
+    "scope": "All uploaded file bytes are preserved by Git; no automatic CRLF/LF conversion.",
+    "verification": "A fresh authenticated clone and commit ZIP will be compared with every uploaded file SHA256.",
+    "fpga_software_model_bitstream_content_changed": false
   }
 }

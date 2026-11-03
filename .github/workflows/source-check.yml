@@ -11,7 +11,7 @@ jobs:
       - name: Install RTL tools
         run: sudo apt-get update && sudo apt-get install -y iverilog
       - name: Check source layout
-        run: python scripts/check_repository.py
+        run: python scripts/test_repository_checks.py && python scripts/check_repository.py
       - name: Run portable RTL regressions (RGB requires external Gowin library)
         run: python scripts/run_rtl.py
       - name: Run policy regressions
