@@ -1,0 +1,25 @@
+name: source-check
+on: [push, pull_request, workflow_dispatch]
+jobs:
+  offline:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install RTL tools
+        run: sudo apt-get update && sudo apt-get install -y iverilog
+      - name: Check source layout
+        run: python scripts/check_repository.py
+      - name: Run portable RTL regressions (RGB requires external Gowin library)
+        run: python scripts/run_rtl.py
+      - name: Run policy regressions
+        run: python scripts/run_python_tests.py
+      - name: Check host console and mock HTTP API
+        run: python web/app.py --check && python web/test_web.py
+      - name: Check browser JavaScript syntax
+        run: node --check web/static/app.js
+      - name: Test detector CPU postprocessing
+        working-directory: software/detector
+        run: make abi && make test

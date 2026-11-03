@@ -1,0 +1,74 @@
+/*
+ * rgb_neutral_trim.v
+ * RGB565到RGB888的中性色彩补偿；使用查找表完成舍入和饱和运算。
+ * 接口与参数保持交付版本；第三方版权与综合指令按原文件保留。
+ */
+module rgb_neutral_trim(input [15:0] din, output [23:0] dout);
+wire [4:0] ri=din[15:11], bi=din[4:0];
+wire [7:0] r,b;
+wire r0l,r0h;
+LUT4 #(.INIT(16'h9d46)) u_r0l(.F(r0l),.I0(ri[0]),.I1(ri[1]),.I2(ri[2]),.I3(ri[3]));
+LUT4 #(.INIT(16'hffea)) u_r0h(.F(r0h),.I0(ri[0]),.I1(ri[1]),.I2(ri[2]),.I3(ri[3]));
+assign r[0]=ri[4] ? r0h : r0l;
+wire r1l,r1h;
+LUT4 #(.INIT(16'h7c3e)) u_r1l(.F(r1l),.I0(ri[0]),.I1(ri[1]),.I2(ri[2]),.I3(ri[3]));
+LUT4 #(.INIT(16'hffe9)) u_r1h(.F(r1h),.I0(ri[0]),.I1(ri[1]),.I2(ri[2]),.I3(ri[3]));
+assign r[1]=ri[4] ? r1h : r1l;
+wire r2l,r2h;
+LUT4 #(.INIT(16'ha954)) u_r2l(.F(r2l),.I0(ri[0]),.I1(ri[1]),.I2(ri[2]),.I3(ri[3]));
+LUT4 #(.INIT(16'hffc2)) u_r2h(.F(r2h),.I0(ri[0]),.I1(ri[1]),.I2(ri[2]),.I3(ri[3]));
+assign r[2]=ri[4] ? r2h : r2l;
+wire r3l,r3h;
+LUT4 #(.INIT(16'h9b32)) u_r3l(.F(r3l),.I0(ri[0]),.I1(ri[1]),.I2(ri[2]),.I3(ri[3]));
+LUT4 #(.INIT(16'hffd9)) u_r3h(.F(r3h),.I0(ri[0]),.I1(ri[1]),.I2(ri[2]),.I3(ri[3]));
+assign r[3]=ri[4] ? r3h : r3l;
+wire r4l,r4h;
+LUT4 #(.INIT(16'h2da4)) u_r4l(.F(r4l),.I0(ri[0]),.I1(ri[1]),.I2(ri[2]),.I3(ri[3]));
+LUT4 #(.INIT(16'hffed)) u_r4h(.F(r4h),.I0(ri[0]),.I1(ri[1]),.I2(ri[2]),.I3(ri[3]));
+assign r[4]=ri[4] ? r4h : r4l;
+wire r5l,r5h;
+LUT4 #(.INIT(16'hce38)) u_r5l(.F(r5l),.I0(ri[0]),.I1(ri[1]),.I2(ri[2]),.I3(ri[3]));
+LUT4 #(.INIT(16'hfff1)) u_r5h(.F(r5h),.I0(ri[0]),.I1(ri[1]),.I2(ri[2]),.I3(ri[3]));
+assign r[5]=ri[4] ? r5h : r5l;
+wire r6l,r6h;
+LUT4 #(.INIT(16'h0fc0)) u_r6l(.F(r6l),.I0(ri[0]),.I1(ri[1]),.I2(ri[2]),.I3(ri[3]));
+LUT4 #(.INIT(16'hfffe)) u_r6h(.F(r6h),.I0(ri[0]),.I1(ri[1]),.I2(ri[2]),.I3(ri[3]));
+assign r[6]=ri[4] ? r6h : r6l;
+wire r7l,r7h;
+LUT4 #(.INIT(16'hf000)) u_r7l(.F(r7l),.I0(ri[0]),.I1(ri[1]),.I2(ri[2]),.I3(ri[3]));
+LUT4 #(.INIT(16'hffff)) u_r7h(.F(r7h),.I0(ri[0]),.I1(ri[1]),.I2(ri[2]),.I3(ri[3]));
+assign r[7]=ri[4] ? r7h : r7l;
+wire b0l,b0h;
+LUT4 #(.INIT(16'h9696)) u_b0l(.F(b0l),.I0(bi[0]),.I1(bi[1]),.I2(bi[2]),.I3(bi[3]));
+LUT4 #(.INIT(16'hd696)) u_b0h(.F(b0h),.I0(bi[0]),.I1(bi[1]),.I2(bi[2]),.I3(bi[3]));
+assign b[0]=bi[4] ? b0h : b0l;
+wire b1l,b1h;
+LUT4 #(.INIT(16'he718)) u_b1l(.F(b1l),.I0(bi[0]),.I1(bi[1]),.I2(bi[2]),.I3(bi[3]));
+LUT4 #(.INIT(16'he718)) u_b1h(.F(b1h),.I0(bi[0]),.I1(bi[1]),.I2(bi[2]),.I3(bi[3]));
+assign b[1]=bi[4] ? b1h : b1l;
+wire b2l,b2h;
+LUT4 #(.INIT(16'h07e0)) u_b2l(.F(b2l),.I0(bi[0]),.I1(bi[1]),.I2(bi[2]),.I3(bi[3]));
+LUT4 #(.INIT(16'hf81f)) u_b2h(.F(b2h),.I0(bi[0]),.I1(bi[1]),.I2(bi[2]),.I3(bi[3]));
+assign b[2]=bi[4] ? b2h : b2l;
+wire b3l,b3h;
+LUT4 #(.INIT(16'h52aa)) u_b3l(.F(b3l),.I0(bi[0]),.I1(bi[1]),.I2(bi[2]),.I3(bi[3]));
+LUT4 #(.INIT(16'heab5)) u_b3h(.F(b3h),.I0(bi[0]),.I1(bi[1]),.I2(bi[2]),.I3(bi[3]));
+assign b[3]=bi[4] ? b3h : b3l;
+wire b4l,b4h;
+LUT4 #(.INIT(16'h64cc)) u_b4l(.F(b4l),.I0(bi[0]),.I1(bi[1]),.I2(bi[2]),.I3(bi[3]));
+LUT4 #(.INIT(16'hf326)) u_b4h(.F(b4h),.I0(bi[0]),.I1(bi[1]),.I2(bi[2]),.I3(bi[3]));
+assign b[4]=bi[4] ? b4h : b4l;
+wire b5l,b5h;
+LUT4 #(.INIT(16'h78f0)) u_b5l(.F(b5l),.I0(bi[0]),.I1(bi[1]),.I2(bi[2]),.I3(bi[3]));
+LUT4 #(.INIT(16'hfc38)) u_b5h(.F(b5h),.I0(bi[0]),.I1(bi[1]),.I2(bi[2]),.I3(bi[3]));
+assign b[5]=bi[4] ? b5h : b5l;
+wire b6l,b6h;
+LUT4 #(.INIT(16'h7f00)) u_b6l(.F(b6l),.I0(bi[0]),.I1(bi[1]),.I2(bi[2]),.I3(bi[3]));
+LUT4 #(.INIT(16'hffc0)) u_b6h(.F(b6h),.I0(bi[0]),.I1(bi[1]),.I2(bi[2]),.I3(bi[3]));
+assign b[6]=bi[4] ? b6h : b6l;
+wire b7l,b7h;
+LUT4 #(.INIT(16'h8000)) u_b7l(.F(b7l),.I0(bi[0]),.I1(bi[1]),.I2(bi[2]),.I3(bi[3]));
+LUT4 #(.INIT(16'hffff)) u_b7h(.F(b7h),.I0(bi[0]),.I1(bi[1]),.I2(bi[2]),.I3(bi[3]));
+assign b[7]=bi[4] ? b7h : b7l;
+assign dout={r,din[10:5],din[10:9],b};
+endmodule

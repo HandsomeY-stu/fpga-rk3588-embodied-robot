@@ -1,0 +1,16 @@
+[Unit]
+Description=FPGA and RK3588 robot host console
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/fpga-rk3588-embodied-robot
+EnvironmentFile=-/etc/robot-console.env
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/usr/bin/python3 /opt/fpga-rk3588-embodied-robot/web/app.py
+Restart=on-failure
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target

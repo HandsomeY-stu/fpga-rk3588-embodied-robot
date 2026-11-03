@@ -1,0 +1,33 @@
+# Tool outputs and caches
+**/__pycache__/
+*.py[cod]
+.venv/
+venv/
+fpga/impl/
+fpga/*.user
+*.o
+*.vvp
+software/detector/realtime_yolo
+software/detector/test_yolo
+software/detector/abi_check
+
+# Measurements and local configuration
+*.log
+*.jsonl
+logs/
+experiment/
+capture/
+.env
+config.local.*
+.workbuddy-ai/
+HANDOFF.md
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
+
+# Alternative training/conversion assets; the verified RKNN file is included
+# See models/assets_manifest.json
+models/*.onnx
+models/*.pt
+models/*.pth

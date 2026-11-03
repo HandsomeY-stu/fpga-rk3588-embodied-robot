@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "checked_date": "2026-11-03",
+  "model_source_commit": "5adf7c1bd17e169e9880ccdf3b49adde925ab7f9",
+  "model_source_url": "https://github.com/rockchip-linux/rknpu2/blob/5adf7c1bd17e169e9880ccdf3b49adde925ab7f9/examples/rknn_yolov5_demo/model/RK3588/yolov5s-640-640.rknn",
+  "model_git_blob": "87419fd8d5dfcb35fa1d25f7cc2aea7fd933b790",
+  "asset_binding": "All three files match the current RK3588 /root/task6live_20261029/models SHA256 values.",
+  "files": {
+    "yolov5s-640-640.rknn": {
+      "bytes": 8477315,
+      "sha256": "d4ecf73883e7bea27d59dc7a521f6786c6ce6b3b146ed45ee7b6df0e84d80ad9",
+      "role": "RK3588 YOLOv5 weights; 640x640 RGB uint8"
+    },
+    "box_priors.txt": {
+      "bytes": 76929,
+      "sha256": "3560aa6b03bb7f69240b6efcac88dbf56ffa3c73b0da13f695bf97c2206d2089",
+      "role": "Required by the shared initialization loader, including YOLO mode"
+    },
+    "coco_labels_list.txt": {
+      "bytes": 664,
+      "sha256": "6d4b61aedabd129c30f2d5c0d8ed6da0068fb975a91e0085544792d6b3d3ca5e",
+      "role": "Sparse COCO category names; bottle=44, backpack=27, suitcase=33"
+    }
+  }
+}

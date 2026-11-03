@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!-- 上位机页面：任务控制、运动操作、视频与实时遥测。 -->
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+<title>小车远程控制台</title>
+<link rel="stylesheet" href="/static/style.css"></head><body>
+<h1>小车远程控制台</h1>
+<div class="hdr">
+  <div class="badge" id="badge"><span class="dot"></span><span id="badgeTxt">连接中…</span></div>
+  <span class="lbl" id="hdrInfo" style="font-size:11px"></span>
+</div>
+<div class="sub" id="fpgaStat">FPGA 遥测：—</div>
+
+<div class="grid">
+  <button class="arc" data-dir="5">原地左转</button>
+  <button class="fwd" data-dir="1">前　进</button>
+  <button class="arc" data-dir="6">原地右转</button>
+  <button class="arc" data-dir="3">左　转</button>
+  <button class="back" data-dir="2">后　退</button>
+  <button class="arc" data-dir="4">右　转</button>
+</div>
+<button class="estop" id="estop" style="width:100%;margin-bottom:14px">急 停</button>
+
+<div class="card">
+  <div class="row"><span class="lbl">实时画面</span><span class="val" id="camTip">连接中…</span></div>
+  <img id="cam" alt="画面" style="width:100%;border-radius:8px;display:block;
+       background:#000;margin-top:6px;aspect-ratio:16/9;object-fit:contain">
+</div>
+
+<!-- ★ 2026-10-26 人员识别看板（任务书"人员识别"演示用）
+     ★ 2026-10-27 升级为「目标识别看板」：YOLOv5s 的**所有类别**都画黄色方框，
+       方框下方写类别名（--boxes-all），横幅显示类别 + 个数 + 最高置信度。
+     ★ 2026-11-02 更正：检测器实际是 YOLOv5s-640（RKNN/NPU），不是 SSD；
+       页面可见文案里的 "SSD" 已改成 "YOLOv5s"（代码内部个别旧注释仍保留原词，不影响功能）。
+     开启后画面切到检测结果。演示录制时把手机对着实车 + 这个页面即可同框。 -->
+<div class="card">
+  <div class="row"><span class="lbl">目标识别（人员 + 物体，YOLOv5s）</span>
+    <div class="sw" id="sw-person"></div>
+  </div>
+  <div id="pBanner" style="margin:8px 0;padding:10px;border-radius:8px;
+       text-align:center;font-weight:700;font-size:16px;
+       background:#eef2f7;color:#5a6b80">未开启</div>
+  <img id="pimg" alt="目标识别画面（黄框 + 类别名）" style="width:100%;border-radius:8px;display:none;
+       background:#000;aspect-ratio:16/9;object-fit:contain">
+  <label style="display:flex;align-items:center;gap:8px;margin:6px 0;font-size:14px;
+         color:var(--fg2,#5a6b80);cursor:pointer">
+    <input type="checkbox" id="pUart" style="width:16px;height:16px">
+    同步 FPGA OSD（把识别结果回传 FPGA 叠加显示）
+  </label>
+</div>
+
+<div class="card">
+  <div class="row"><span class="lbl">速度</span><span class="val"><span id="spdv">30</span>%</span></div>
+  <div class="row"><input type="range" id="spd" min="5" max="60" value="30" step="1"></div>
+</div>
+
+<div class="card">
+  <div class="row"><span class="lbl">任务三 · FPGA 自主避障</span>
+      <div class="sw" id="sw-avoid"></div></div>
+  <div class="row"><span class="lbl">任务四 · 自主导航</span>
+      <div class="sw" id="sw-nav"></div></div>
+  <div class="row"><span class="lbl">任务五 · 指定目标跟随</span><div class="sw" id="sw-t6"></div></div>
+  <div class="row" style="margin-top:6px"><span class="lbl">画面 OSD</span>
+    <select id="osdSel" style="font-size:13px;padding:4px">
+      <option value="1">只姿态角（默认）</option>
+      <option value="0">纯净画面（锁定目标时用）</option>
+    </select></div>
+  <div class="row"><span class="lbl">指定目标</span>
+      <select id="tgt">
+        <option value="bottle">红色瓶子（cls 44）</option>
+        <option value="bag">红色书包（27/31/33）</option>
+        <option value="both">红瓶 + 书包（都跟）</option>
+        <option value="person">人（cls 1）</option>
+      </select></div>
+  <div class="row"><span class="lbl">找到后持续跟随</span>
+      <div class="sw on" id="sw-follow"></div></div>
+  <div class="row"><span class="lbl">任务六 · 靠近红瓶</span><div class="sw" id="sw-t6s"></div></div>
+  <div class="sub" id="t6Stat" style="font-size:12px">任务六状态：未运行</div>
+  <div class="tip" id="red-target">红瓶候选：等待检测</div>
+  <div class="row"><span class="lbl">开启预览框</span><div class="sw" id="sw-prev"></div></div>
+  <div class="msg" id="msg"></div>
+</div>
+
+<div class="card">
+  <div class="stat">
+    <div><span class="lbl">前距</span><span class="val" id="s-rng">–</span></div>
+    <div><span class="lbl">yaw</span><span class="val" id="s-yaw">–</span></div>
+    <div><span class="lbl">左轮</span><span class="val" id="s-vl">–</span></div>
+    <div><span class="lbl">右轮</span><span class="val" id="s-vr">–</span></div>
+    <div><span class="lbl">任务四状态</span><span class="val" id="s-st">–</span></div>
+    <div><span class="lbl">已发帧</span><span class="val" id="s-sent">–</span></div>
+  </div>
+</div>
+
+<script src="/static/app.js"></script></body></html>

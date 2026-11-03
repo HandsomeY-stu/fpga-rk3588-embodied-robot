@@ -1,0 +1,128 @@
+{
+  "date": "2026-11-03",
+  "kind": "actual board static/interface tests with motor power disconnected",
+  "bitstream_sha256": "205046b2936cde17a770f291c3819977b2f951901ccf9222402300de8d5b0827",
+  "usercode_readback": "0x0000325C",
+  "programming_operation": "SRAM Program and Verify (operation_index 4)",
+  "programmer_exit_code": 18,
+  "programmer_verification": "Verify Failed; not a bitwise SRAM verification pass",
+  "nonvolatile_flash_written": false,
+  "communication": {
+    "ssh": true,
+    "http": true,
+    "telemetry_fresh": true,
+    "pc_wifi_unchanged": true
+  },
+  "live_interfaces": {
+    "detector_samples": 40,
+    "unique_frame_ids": 40,
+    "max_detector_age_ms": 85,
+    "max_tlm_age_ms": 295,
+    "classes": [
+      1,
+      44,
+      47,
+      72,
+      73
+    ],
+    "new_entry_assets_match": true,
+    "modes_enter_exit": [
+      1,
+      4
+    ],
+    "targets_configured": [
+      "bag",
+      "bottle"
+    ],
+    "osd_modes": [
+      0,
+      1
+    ],
+    "all_wheels_zero": true,
+    "no_live_follow_started": true
+  },
+  "red_bottle": {
+    "samples": 40,
+    "red_bottle_frames": 40,
+    "unique_frames": 40,
+    "max_detector_age_ms": 88,
+    "max_tlm_age_ms": 296,
+    "all_wheels_zero": true,
+    "all_manual": true
+  },
+  "dry_controller": {
+    "follow_dry": {
+      "samples": 100,
+      "all_dry": true,
+      "errors": 0,
+      "lock_states": {
+        "LOCKED": 100
+      },
+      "states": {
+        "APPROACH": 100
+      },
+      "target_present": 100,
+      "computed_max_speed": 18
+    },
+    "approach_dry": {
+      "samples": 60,
+      "all_dry": true,
+      "errors": 0,
+      "lock_states": {
+        "LOCKED": 60
+      },
+      "states": {
+        "APPROACH": 60
+      },
+      "target_present": 60,
+      "computed_max_speed": 18
+    }
+  },
+  "cpp": {
+    "compiler": "g++ (Debian 10.2.1-6) 10.2.1",
+    "abi_check": "PASS",
+    "cpu_postprocessor": "PASS",
+    "native_build": "PASS",
+    "detector_sha256": "a36af8dedcf32b187842d6575c9fcd29fb734726ca027163807e405af8ef0ef7",
+    "rknn_runtime_sha256": "9c5e43179e83f82b3ec1f2c2f9b520559af23ab76327aca63500db30d63d6910"
+  },
+  "offline": {
+    "web_tests_pc": 14,
+    "web_tests_rk": 14,
+    "policy_tests": 84,
+    "rtl_passed": 6,
+    "rtl_skipped": 0,
+    "gowin_simulation_library_used": true,
+    "javascript_syntax": "PASS"
+  },
+  "remaining": [
+    "IMU actual update frequency not measured in the recorded acceptance",
+    "Known full-design DDR/reset timing violations remain",
+    "Programmer bitwise SRAM verification was not successful"
+  ],
+  "final_state": {
+    "fpga_mode": 0,
+    "forced_stop": true,
+    "wheels": [
+      0,
+      0
+    ],
+    "detector_uart": false,
+    "live_task": false,
+    "osd_mode": 1,
+    "target": "bottle",
+    "recognition_enabled": true
+  },
+  "user_reported_validation": {
+    "date": "2026-11-03",
+    "evidence_type": "user-reported physical functional validation",
+    "original_statement": "其他的功能我也全部验证正确了",
+    "scope": "User reports all other functions verified correct after the r03 delivery.",
+    "detailed_measurement_logs_supplied": false,
+    "distinction": "Does not replace the recorded agent static/DRY evidence or prove timing signoff or bitwise programming verification."
+  },
+  "agent_unperformed_tests_at_static_acceptance": [
+    "Agent did not perform a powered-motor Task4 route test in the recorded static acceptance.",
+    "Agent did not perform powered-motor follow/approach tests in that acceptance. User subsequently reports other functions correct."
+  ]
+}
